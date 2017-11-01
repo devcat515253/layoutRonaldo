@@ -1,0 +1,349 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style-type: none
+
+a
+	display: inline-block
+	margin: 0
+	padding: 0
+	color: lightgrey
+	&:hover,&:focus
+		text-decoration: none
+		//color:  #191a1e
+		color: #276fc9
+.container
+	//width: 1170px / 1920px * 100%
+	width: 960px
+	margin: 0 auto
+
+
+
+.ic
+	&-apple
+		&:before
+			content: ''
+			position: relative
+			width: 21px
+			height: 27px
+			background: url("../img/apple-ic.png") no-repeat center
+			background-size: contain
+	&-android
+		&:before
+			content: ''
+			position: relative
+			width: 21px
+			height: 24px
+			background: url("../img/android.png") no-repeat center
+			background-size: contain
+	&-win-client
+		&:before
+			content: ''
+			position: relative
+			width: 16px
+			height: 20px
+			background: url("../img/win-client.png") no-repeat center
+			background-size: contain
+	&-win
+		&:before
+			content: ''
+			position: relative
+			width: 23px
+			height: 20px
+			background: url("../img/win.png") no-repeat center
+			background-size: contain
+
+
+.btn
+	color: white
+	font-size: 2.4rem
+	font-weight: 700
+	font-style: italic
+	line-height: 2.4rem
+	text-transform: uppercase
+	&:hover,&:focus
+		color: white
+	&:active
+		transform: translate(0,3px)
+	&_red
+		position: relative
+		z-index: 1
+		background: #e31652
+		border: 2px solid #f9002b
+		margin: 0 auto
+		padding: 1.5rem	3rem
+		border-radius: 50px
+		box-shadow: 0px 0px 33px 7px #ae1f38 inset
+		font-weight: 900
+		&:hover
+			background: darken(#e31652,5%)
+	&_transparent
+		min-width: 20.4rem
+		background-color: #003283
+		border: 1px solid white
+		border-radius: 10px
+		padding: 1rem 2.5rem
+		&:hover
+			border: 1px solid yellow
+		.description
+			display: flex
+			align-items: center
+			&:before
+				content: ''
+				position: relative
+
+				margin-right: 2.5rem
+			div
+				display: inline-flex
+				flex-direction: column
+				justify-content: center
+				line-height: 3rem
+			.info
+				color: white
+				font-size: 10px
+				font-weight: 400
+				line-height: 1.4rem
+				display: block
+				font-family: "Myriad Pro", sans-serif
+				font-style: normal
+			.name
+				color: white
+				font-size: 17px
+				font-weight: 600
+				line-height: 1.7rem
+				text-transform: uppercase
+				font-family: "Myriad Pro",sans-serif
+				font-style: normal
+
+.top-line
+	display: flex
+	&__left
+		flex: 1
+		text-align: center
+		display: flex
+		flex-direction: column
+		span
+			color: white
+			font-size: 3.3rem
+			font-weight: 900
+			font-style: italic
+			line-height: 3.9rem
+			text-transform: uppercase
+			&:first-child
+				font-size: 4.4rem
+				line-height: 4.7rem
+				font-weight: 400
+			&:last-child
+				font-size: 4.6rem
+				line-height: 4.5rem
+	&__right
+		flex: 1
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		span
+			color: white
+			font-size: 3.8rem
+			font-weight: 900
+			font-style: italic
+			line-height: 4.3rem
+			text-transform: uppercase
+			padding-right: 2rem
+			&.yellow
+				color: #ffee58
+				font-size: 5.9rem
+				font-weight: 900
+				font-style: italic
+				line-height: 6.1rem
+				text-transform: uppercase
+				align-self: center
+				margin-left: 4rem
+				padding-right: 0
+
+.together
+	display: flex
+	align-items: flex-end
+	text-align: right
+	.logo
+		margin-bottom: .9rem
+		width: 179px
+
+.header-items
+	display: flex
+	justify-content: space-around
+	margin-top: 8rem
+	.item
+		display: flex
+		align-items: center
+		position: relative
+		&:before
+			content: ''
+			position: relative
+			background: url("../img/procent.png") no-repeat center
+			background-size: contain
+			width: 37px
+			height: 46px
+			margin-right: 1rem
+			margin-bottom: 10px
+		&:nth-child(2)
+			&:before
+				background: url("../img/people.png") no-repeat center
+				background-size: contain
+				width: 64px
+				height: 52px
+		&:last-child
+			&:before
+				background: url("../img/finger.png") no-repeat center
+				background-size: contain
+				width: 50px
+				height: 52px
+		span
+			display: block
+			color: #ffee58
+			font-size: 4.4rem
+			font-weight: 900
+			font-style: italic
+			line-height: 3.4rem
+			text-transform: uppercase
+			&:first-child
+				color: white
+				font-size: 12px
+				font-weight: 700
+				font-style: italic
+				line-height: 2.4rem
+				padding-left: .5rem
+			&:last-child
+				font-size: 13px
+				color: white
+				padding-left: .5rem
+
+
+
+.header
+	display: flex
+	min-height: 844px
+	background: url("../img/header-bg.png") no-repeat top center
+	background-size: cover
+	padding-top: 5rem
+	.container
+		display: flex
+		flex-direction: column
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			background: url("../img/podpis.png") no-repeat center
+			background-size: contain
+			width: 97px
+			height: 64px
+			top: 35%
+			right: 0
+
+		.btn_red
+			margin-top: 35rem
+
+
+
+.footer
+	background-color: #003283
+	display: flex
+	min-height: 650px
+	.container
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-top: 6rem
+		padding-bottom: 5rem
+		.buttons
+			width: 100%
+			justify-content: space-between
+			display: flex
+			flex-wrap: wrap
+		.line
+			width: 58.1rem
+			height: 0.1rem
+			opacity: 0.5
+			background-color: #145acc
+			margin: 6rem 0
+
+
+
+
+.policy
+	margin-top: 4rem
+	color: #145acc
+	font-family: "Myriad Pro",sans-serif
+	font-size: 1.2rem
+	font-weight: 400
+	text-align: center
+
+.img18
+	margin-top: 3rem!important
+
+
+.ronaldo
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	width: 1151px
+
+
+@import "media" // Всегда в конце
